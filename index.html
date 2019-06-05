@@ -16,51 +16,51 @@
     <link rel="icon" href="favicon.png">
   </head>
   <body>
-    <header id="main-header">
-      <div class="container">
-        <div id="logo">
-          <h2 id="logo__text">
-            Tanatos<span class="orange-text">Studio</span>
-          </h2>
-        </div>
-        <div id="menu">
-          <span>Menu</span>
-          <nav id="main-nav">
-            <div id="nav__toggle">
-              <input type="checkbox">
-              <span></span>
-              <span></span>
-              <span></span>
-              <ul id="nav__ul">
-                <li class="nav__li"><a class="nav__a" href="#">Home</a></li>
-                <li class="nav__li"><a class="nav__a" href="#">About us</a></li>
-                <li class="nav__li"><a class="nav__a" href="#">Services</a></li>
-                <li class="nav__li"><a class="nav__a" href="#">Our works</a></li>
-                <li class="nav__li"><a class="nav__a" href="#">Contact</a></li>
+    <header class="site-header">
+      <h1 class="logo">
+        Tanatos<span class="orange-text fw-medium">Studio</span>
+      </h1>
+      <div class="menu">
+        <span>Menu</span>
+        <nav class="main-nav">
+          <div class="nav__toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="nav__ul">
+              <li class="nav__li"><a class="nav__a" href="#">Home</a></li>
+              <li class="nav__li"><a class="nav__a" href="#">About us</a></li>
+              <li class="nav__li"><a class="nav__a" href="#">Services</a></li>
+              <li class="nav__li"><a class="nav__a" href="#">Our works</a></li>
+              <li class="nav__li"><a class="nav__a" href="#">Contact</a></li>
+            </ul>
+            <div class="sc-media">
+              <ul class="sc-media__group">
+                <li class="sc-media__item"><a href="#">1</a></li>
+                <li class="sc-media__item"><a href="#">2</a></li>
+                <li class="sc-media__item"><a href="#">3</a></li>
+                <li class="sc-media__item"><a href="#">4</a></li>
+                <li class="sc-media__item"><a href="#">5</a></li>
               </ul>
-              <div id="sc-media">
-                <ul id="sc-media__group">
-                  <li class="sc-media__item"><a href="#">1</a></li>
-                  <li class="sc-media__item"><a href="#">2</a></li>
-                  <li class="sc-media__item"><a href="#">3</a></li>
-                  <li class="sc-media__item"><a href="#">4</a></li>
-                  <li class="sc-media__item"><a href="#">5</a></li>
-                </ul>
-              </div>
             </div>
-          </nav>
-        </div>
-      </div>
-      <div id="header-text-container">
-        <h1>We Design <br> <span class="orange-text">Things</span></h1>
-        <h2>We will create a website for your business in no time! <br> The best websites are made by our team! <br> Every website we code is done with <span class="orange-text">love and passion.</span></h2>
-        <div>
-          <a class="header-btn" id="hire-btn" href="#">Hire us</a>
-          <a class="header-btn" id="works-btn" href="#">Our Works</a>
-        </div>  
-        <a id="scroll-down" href="#"><i class="im im-angle-down"></i></a>
+          </div>
+        </nav>
       </div>
     </header>
+    <main>
+      <section class="hero flex-center">
+          <h2 class="hero__motto">We Design <br> <span class="orange-text fw-medium fs-15">Things</span></h2>
+          <p class="hero__text">We will create a website for your business in no time! <br> The best websites are made by our team! <br> Every website we code is done with <span class="orange-text italic">love and passion.</span></p>
+          <div class="flex-center">
+            <a class="hero-btn hire-btn" href="#">Hire us</a>
+            <a class="hero-btn works-btn"href="#">Our Works</a>
+          </div>  
+          <a class="scroll-down" href="#"><i class="im im-angle-down"></i><span class="sr-only">Scroll to about us section</span></a>
+      </section>
+    </main>
+      
+   
 
     <script type="module" src="./resources/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
