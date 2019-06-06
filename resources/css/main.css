@@ -112,6 +112,7 @@ html, body {
   color: white;
   background-image: linear-gradient(rgba(18, 27, 37, 0.85),rgba(18, 27,37, 0.85)), url('../img/macbook-bg.png');
   background-size: cover;
+  background-attachment: fixed; 
 }
 
 .hero__motto {
@@ -140,13 +141,13 @@ html, body {
   padding: 0.65rem 0;
 }
 
-.hire-btn {
+.orange-btn {
   background-color: #f7600e;
   color: white;
 }
 
-.hire-btn:hover,
-.hire-btn:focus {
+.orange-btn:hover,
+.orange-btn:focus {
   -webkit-animation: pulse .7s;
   animation: pulse .7s;
   box-shadow: 0 0 0 5rem rgba(255, 255, 255, 0);
@@ -198,9 +199,71 @@ html, body {
   fill: #f7600e;
 }
 
+/* newsletter section */
 
+.newsletter-section {
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#121b25d9,rgba(18, 27,37, 0.85)), url('../img/tablet-bg.png');
+  background-attachment: fixed; 
+  background-position: 60%;
+  background-size: cover;
+  flex-direction: column;
+}
+.newsletter-form {
+  flex-direction: column;
+  width: 100%;
+}
+.newsletter-form__input {
+  width: 85%;
+  height: 3rem;
+  border-radius: 0.65rem;
+  margin: 0 1rem;
+  background:none;
+  border: 1px solid #f7600e;
+  border-left: 5px solid #f7600e;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #6e6e6e;
+  text-align: center;
+  transition: font-size 100ms ease-in, border 100ms ease-in;
+}
 
+.newsletter-form__input:focus {
+  font-size: 1.2em;
+  color: white;
+  outline: none;
+}
 
+.newsletter-form__input:invalid {
+  border-color: rgb(250, 110, 90);
+}
+
+.newsletter-form__input:valid {
+  border-color: palegreen;
+}
+
+.newsletter-form__input:focus:invalid {
+  background: url("../img/invalid.svg") no-repeat 95% 50%;
+  background-size: 1.5rem;
+}
+
+.newsletter-form__input:focus:valid {
+  background: url("../img/valid.svg") no-repeat 95% 50%;
+  background-size: 1.5rem;
+}
+
+.newsletter-form__button {
+  outline: none;
+  border: none;
+  height: 3rem;
+  width: 42.5%;
+  border-radius: 0.65rem;
+  text-transform: uppercase;
+  
+}
 
 /* KEYFRAMES */
 
