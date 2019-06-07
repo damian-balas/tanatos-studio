@@ -131,7 +131,9 @@ html, body {
   margin: 1rem 0 2rem 0;
 }
 
-.hero-btn {
+.orange-btn {
+  background-color: #f7600e;
+  color: white;
   display: inline-block;
   text-decoration: none;
   text-align: center;
@@ -139,11 +141,8 @@ html, body {
   width: 8.5rem;
   border-radius: 0.5rem;
   padding: 0.65rem 0;
-}
-
-.orange-btn {
-  background-color: #f7600e;
-  color: white;
+  border: none;
+  outline: none;
 }
 
 .orange-btn:hover,
@@ -154,6 +153,13 @@ html, body {
 }
 
 .works-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  width: 8.5rem;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0;
   margin-left: 1.2rem;
   border: 1px solid white;
   color: white;
@@ -173,18 +179,23 @@ html, body {
 
 /* servicer section */
 
-.services-section {
+.services {
   min-height: 100vh;
   background-color: #fff;
   display: flex;
+  padding: 3rem;
   flex-direction: row;
   flex-wrap: wrap;
   color: #6e6e6e;
 }
 
 .service {
-  padding: 3.5rem;
+  padding-bottom: 3.5rem;
   text-align: center;
+}
+
+.service:nth-last-child(1){
+  padding: 0;
 }
 
 .service__heading {
@@ -201,7 +212,7 @@ html, body {
 
 /* newsletter section */
 
-.newsletter-section {
+.newsletter {
   min-height: 35vh;
   display: flex;
   align-items: center;
@@ -255,15 +266,79 @@ html, body {
   background-size: 1.5rem;
 }
 
-.newsletter-form__button {
-  outline: none;
-  border: none;
-  height: 3rem;
-  width: 42.5%;
-  border-radius: 0.65rem;
-  text-transform: uppercase;
-  
+.newsletter-form__input:focus::-webkit-input-placeholder { 
+  color: transparent;
 }
+
+.newsletter-form__input:focus::-moz-placeholder { 
+  color: transparent;
+}
+
+.newsletter-form__input:focus:-ms-input-placeholder { 
+  color: transparent;
+}
+
+.newsletter-form__input:focus:-moz-placeholder { 
+  color: transparent;
+}
+
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+
+/* our works section */
+
+.our-works {
+  color: #6e6e6e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.our-works__heading {
+  font-size: 1.6rem;
+}
+
+.our-works__text {
+  padding: 1rem 0;
+}
+
+.our-works__images {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+}
+
+.our-works__image {
+  width: 100%;
+  padding: 1rem 0;
+  height: auto;
+  border-radius: 6%;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* KEYFRAMES */
 
@@ -288,5 +363,12 @@ html, body {
   50% {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes autofill {
+  to {
+      color: #fff;
+      background: transparent;
   }
 }
