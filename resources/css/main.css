@@ -171,7 +171,7 @@ html, body {
   text-align: center;
 }
 
-.scroll-down i {
+.scroll-down span {
   color: white;
   font-size: 2.5rem;
   animation: blink 1.5s infinite;
@@ -332,11 +332,74 @@ input:-webkit-autofill {
   transform: translateX(0px);
 }
 
+/* testimonials section */
+
+.testimonials {
+  min-height: 100vh;
+  background: linear-gradient(#121b25d9,rgba(18, 27,37, 0.85)), url('../img/woman-bg.png'); 
+  background-size: cover;
+  background-position: 60%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.testimonial__pic {
+  border-radius: 50%;
+  max-width: 35%;
+}
+
+.testimonial__text {
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 2rem 3.5rem;
+}
+
+.testimonial__person {
+  font-size: 0.8rem;
+  color: #aeaeae;
+}
+
+.testimonial__swiper {
+  border: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh; 
+  
+}
+
+.swiper-button-next, .swiper-button-prev {
+  outline: 0;
+  width: auto;
+  height: auto;
+  -webkit-tap-highlight-color: transparent;
+  background: transparent;
+  font-size: 2rem;
+  color: #f7600e;
+}
 
 
 
+.swiper-pagination-bullet {
+  background: #ffffff;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
-
+.swiper-pagination-bullet-active {
+  background: #f7600e;
+}
 
 
 
