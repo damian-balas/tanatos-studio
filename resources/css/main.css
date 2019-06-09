@@ -401,9 +401,73 @@ input:-webkit-autofill {
   background: #f7600e;
 }
 
+/* our team section */
 
+.team {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* height: 100vh; */
+  overflow: hidden;
+  color: #6e6e6e;
+}
 
+.team__header {
+  font-size: 1.6rem;
+}
 
+.team__text {
+  padding: 1rem 0;
+}
+
+.employee {
+  
+}
+
+/* create a div in html to resize the img */
+.employee__photo {
+  width: 70%;
+  border-radius: 0.5rem;
+}
+
+.employee__name {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  display: block;
+  padding: 1rem 0;
+}
+
+.employee__social-media {
+  padding-bottom: 1rem;
+}
+
+.employee__social-media .fab {
+  margin: 0 0.35rem;
+  border-radius: 50%;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.fa-google-plus-g {
+  background-color: #ff3921;
+} 
+
+.fa-twitter {
+  background-color: #3ec0ea;
+} 
+
+.fa-facebook-f {
+  background-color: #205b9f;
+}
+
+.employee__text {
+  font-size: 0.8rem;
+  font-style: italic;
+}
 
 
 
