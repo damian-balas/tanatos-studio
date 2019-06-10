@@ -335,7 +335,7 @@ input:-webkit-autofill {
 /* testimonials section */
 
 .testimonials {
-  min-height: 100vh;
+  min-height: 25rem;
   background: linear-gradient(#121b25d9,rgba(18, 27,37, 0.85)), url('../img/woman-bg.png'); 
   background-size: cover;
   background-position: 60%;
@@ -376,7 +376,6 @@ input:-webkit-autofill {
 .swiper-container {
   width: 100%;
   height: 100vh; 
-  
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -409,7 +408,6 @@ input:-webkit-autofill {
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  /* height: 100vh; */
   overflow: hidden;
   color: #6e6e6e;
 }
@@ -423,13 +421,53 @@ input:-webkit-autofill {
 }
 
 .employee {
-  
+  padding: 2rem 0;
+  width: 100%;
+  height: 100%;
+  position: relative
 }
 
-/* create a div in html to resize the img */
+.employee:not(:nth-last-of-type(1))::after {
+  content:'';
+  display:block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background:linear-gradient(to right,transparent, #6e6e6e, transparent);
+}
+
 .employee__photo {
-  width: 70%;
+  width: 40%;
+  min-width: 150px;
+  padding-top: 50%;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
   border-radius: 0.5rem;
+}
+
+.employee__photo--1 {
+  background-image: url('../img/employee-1.png');
+
+}
+
+.employee__photo--2 {
+  background-image: url('../img/employee-2.png');
+
+}
+
+.employee__photo--3 {
+  background-image: url('../img/employee-3.png');
+
+}
+
+.employee__photo--4 {
+  background-image: url('../img/employee-4.png');
+
 }
 
 .employee__name {
@@ -452,6 +490,11 @@ input:-webkit-autofill {
   line-height: 2rem;
 }
 
+.employee__text {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
 .fa-google-plus-g {
   background-color: #ff3921;
 } 
@@ -464,10 +507,6 @@ input:-webkit-autofill {
   background-color: #205b9f;
 }
 
-.employee__text {
-  font-size: 0.8rem;
-  font-style: italic;
-}
 
 
 
