@@ -144,7 +144,7 @@
         Enter your email address for newsletter subscription
       </h2>
       <form action="/" class="newsletter-form flex-center">
-        <input name="email" class="newsletter-form__input" type="email" placeholder="Enter Your email for newsletter"
+        <input name="email" class="text-input newsletter-form__input" type="email" placeholder="Enter Your email for newsletter"
           required />
         <button class="orange-btn">Subscribe</button>
       </form>
@@ -203,7 +203,7 @@
     </div>
     </section>
     <section class="team">
-      <h2 class="team__header">Our <span class="orange-text">Team</span></h2>
+      <h2 class="team__heading">Our <span class="orange-text">Team</span></h2>
       <p class="team__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
               <div class="employee">
                 <div class="employee__photo employee__photo--1"></div>
@@ -245,6 +245,23 @@
                 </div>
                 <p class="employee__text">Lorem ipsum dolor sit amet consectetur dolore doloremque inventore nemo enim.</p>
               </div>
+    </section>
+    <section class="contact">
+        <h2 class="contact__heading">Say <span class="orange-text">Hello</span></h2>
+        <p class="contact__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <form class="contact-form" action="/">
+          <input name="email" class="text-input contact-form__input" type="email" placeholder="Your Email" required>
+          <input name="subject" class="text-input contact-form__input" type="text" placeholder="Subject" required>
+          <textarea minlength="10" placeholder="Your Message" name="message" class="text-input contact-form__txtarea" required></textarea>
+          <button class="contact-form__btn orange-btn">Hire us</button>
+        </form> 
+          <div class="contact-form__social-media">
+            <span class="fab fa-facebook-f"></span>
+            <span class="fab fa-twitter"></span>
+            <span class="fab fa-google-plus-g"></span>
+            <span class="fab fa-dribbble"></span>
+            <span class="fab fa-behance"></span>
+          </div>
     </section>
   </main>
   <!-- <footer>

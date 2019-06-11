@@ -75,6 +75,27 @@ html, body {
   display: inline-block;
 }
 
+/* social icons  */
+.fa-google-plus-g {
+  background-color: #ff3921;
+} 
+
+.fa-twitter {
+  background-color: #3ec0ea;
+} 
+
+.fa-facebook-f {
+  background-color: #205b9f;
+}
+
+.fa-dribbble {
+  background-color: #ff72a5;
+}
+
+.fa-behance {
+  background-color: #009bd5;
+}
+
 
 /* HEADER */
 /*REPAIR IT LATER*/
@@ -228,7 +249,7 @@ html, body {
   padding: 2rem 0;
   width: 100%;
 }
-.newsletter-form__input {
+.text-input {
   width: 85%;
   height: 3rem;
   border-radius: 0.65rem;
@@ -243,43 +264,43 @@ html, body {
   transition: font-size 100ms ease-in, border 100ms ease-in;
 }
 
-.newsletter-form__input:focus {
+.text-input:focus {
   font-size: 1.2em;
   color: white;
   outline: none;
 }
 
-.newsletter-form__input:invalid {
+.text-input:invalid {
   border-color: rgb(250, 110, 90);
 }
 
-.newsletter-form__input:valid {
+.text-input:valid {
   border-color: palegreen;
 }
 
-.newsletter-form__input:focus:invalid {
+.text-input:focus:invalid {
   background: url("../img/invalid.svg") no-repeat 95% 50%;
   background-size: 1.5rem;
 }
 
-.newsletter-form__input:focus:valid {
+.text-input:focus:valid {
   background: url("../img/valid.svg") no-repeat 95% 50%;
   background-size: 1.5rem;
 }
 
-.newsletter-form__input:focus::-webkit-input-placeholder { 
+.text-input:focus::-webkit-input-placeholder { 
   color: transparent;
 }
 
-.newsletter-form__input:focus::-moz-placeholder { 
+.text-input:focus::-moz-placeholder { 
   color: transparent;
 }
 
-.newsletter-form__input:focus:-ms-input-placeholder { 
+.text-input:focus:-ms-input-placeholder { 
   color: transparent;
 }
 
-.newsletter-form__input:focus:-moz-placeholder { 
+.text-input:focus:-moz-placeholder { 
   color: transparent;
 }
 
@@ -412,7 +433,7 @@ input:-webkit-autofill {
   color: #6e6e6e;
 }
 
-.team__header {
+.team__heading {
   font-size: 1.6rem;
 }
 
@@ -481,7 +502,7 @@ input:-webkit-autofill {
   padding-bottom: 1rem;
 }
 
-.employee__social-media .fab {
+.fab {
   margin: 0 0.35rem;
   border-radius: 50%;
   color: white;
@@ -495,21 +516,71 @@ input:-webkit-autofill {
   font-style: italic;
 }
 
-.fa-google-plus-g {
-  background-color: #ff3921;
-} 
-
-.fa-twitter {
-  background-color: #3ec0ea;
-} 
-
-.fa-facebook-f {
-  background-color: #205b9f;
+/* contact section */
+.contact {
+  color: white;
+  padding: 3rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(18, 27, 37, 0.85),rgba(18, 27,37, 0.85)), url('../img/city-bg.png');
 }
 
+.contact__heading{
+  font-size: 1.6rem;
+}
 
+.contact__text {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
 
+.contact-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
+}
 
+.contact-form__input {
+  width: 100%;
+
+}
+
+.text-input {
+  height: 3rem;
+  border-radius: 0.65rem;
+  display: block;
+  background:none;
+  border: 1px solid #f7600e;
+  border-left: 5px solid #f7600e;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  outline: none;
+  color: #6e6e6e;
+  text-align: center;
+  transition: font-size 100ms ease-in, border 100ms ease-in;
+}
+
+.contact-form__txtarea {
+  width: 100%;
+  min-height: 7.5rem;
+}
+
+.contact-form__btn {
+  margin-top: 1rem;
+}
+
+.contact-form__social-media {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
 
 
 
