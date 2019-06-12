@@ -21,7 +21,11 @@ html {
 }
 
 html, body {
-  height: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
 }
 
 /* utility classes */
@@ -67,6 +71,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap:wrap;
 }
 
 .circle-border {
@@ -106,6 +111,7 @@ html, body {
 
 .site-header {
   position: absolute;
+  z-index: 1;
   width: 100%;
   top: 0;
   left: 0;
@@ -127,6 +133,8 @@ html, body {
 }
 
 .hero {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
   padding-top: 5rem;
   min-height: 100vh;
   flex-direction: column;
@@ -188,7 +196,7 @@ html, body {
 
 .scroll-down{
   display: block;
-  margin-top: 4rem;
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -234,7 +242,9 @@ html, body {
 /* newsletter section */
 
 .newsletter {
-  min-height: 35vh;
+  -webkit-clip-path: polygon(0 2rem, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
+  clip-path: polygon(0 2rem, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
+  min-height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -249,23 +259,27 @@ html, body {
   padding: 2rem 0;
   width: 100%;
 }
+
+.newsletter-form__input {
+  width: 70%;
+}
+
 .text-input {
-  width: 85%;
   height: 3rem;
   border-radius: 0.65rem;
-  margin: 0 1rem;
+  display: block;
   background:none;
   border: 1px solid #f7600e;
   border-left: 5px solid #f7600e;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-style: italic;
+  outline: none;
   color: #6e6e6e;
   text-align: center;
-  transition: font-size 100ms ease-in, border 100ms ease-in;
+  transition: color 100ms ease-in, border 100ms ease-in;
 }
 
 .text-input:focus {
-  font-size: 1.2em;
   color: white;
   outline: none;
 }
@@ -356,6 +370,8 @@ input:-webkit-autofill {
 /* testimonials section */
 
 .testimonials {
+  -webkit-clip-path: polygon(0 2rem, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
+  clip-path: polygon(0 2rem, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
   min-height: 25rem;
   background: linear-gradient(#121b25d9,rgba(18, 27,37, 0.85)), url('../img/woman-bg.png'); 
   background-size: cover;
@@ -442,21 +458,26 @@ input:-webkit-autofill {
 }
 
 .employee {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   width: 100%;
   height: 100%;
   position: relative
 }
 
-.employee:not(:nth-last-of-type(1))::after {
+.contact::after {
   content:'';
   display:block;
   height: 1px;
-  width: 100%;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  background:linear-gradient(to right,transparent, #6e6e6e, transparent);
+  width: 95%;
+  bottom: 12rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background:linear-gradient(to right,transparent, #ffffff, transparent);
+}
+
+.contact::after {
+  
 }
 
 .employee__photo {
@@ -518,10 +539,16 @@ input:-webkit-autofill {
 
 /* contact section */
 .contact {
+  -webkit-clip-path: polygon(0 2rem, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 2rem, 100% 0%, 100% 100%, 0% 100%);
   color: white;
   padding: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 15rem;
+  position: relative;
   min-height: 100vh;
   display: flex;
+  box-shadow: 0 12px 14px 3px rgba(0, 0, 0, 0.2);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -550,24 +577,12 @@ input:-webkit-autofill {
 
 }
 
-.text-input {
-  height: 3rem;
-  border-radius: 0.65rem;
-  display: block;
-  background:none;
-  border: 1px solid #f7600e;
-  border-left: 5px solid #f7600e;
-  margin-bottom: 0.5rem;
-  font-style: italic;
-  outline: none;
-  color: #6e6e6e;
-  text-align: center;
-  transition: font-size 100ms ease-in, border 100ms ease-in;
-}
-
 .contact-form__txtarea {
   width: 100%;
   min-height: 7.5rem;
+  resize: vertical;
+  text-align: left;
+  padding: 5% 20% 5% 5%;
 }
 
 .contact-form__btn {
@@ -584,6 +599,41 @@ input:-webkit-autofill {
 
 
 
+/* footer section  */
+
+.site-footer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 12rem;
+  color: white;
+  font-size: 1rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.site-footer__link {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to bottom, #f7600e 0%, #f7600e 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size:3px 3px;
+  transition: background-size 300ms;
+}
+
+.site-footer__link:hover {
+  background-size: 4px 100px;
+}
+
+.site-footer__text {
+  margin-bottom: 1rem;
+}
 
 /* KEYFRAMES */
 

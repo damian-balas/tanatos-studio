@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
-  
+
+  //parallax landing elements
   let imageContainer = document.querySelector('.our-works__images'),
       images = document.querySelectorAll('.our-works__image');
 
@@ -14,6 +15,15 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     }
   });
+
+  //current year in the footer
+  function currentYear(){
+    let date =  new Date();
+    let year = date.getFullYear();
+    document.querySelector('.site-footer__year').innerHTML = year;
+   
+  }
+  currentYear();
 
   //swiper init
   let mySwiper = new Swiper ('.swiper-container', {
@@ -30,40 +40,4 @@ document.addEventListener("DOMContentLoaded", function(){
   })
 });
 
-var swiper = new Swiper('.testamonials .swiper-container', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  centeredSlides: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-});
 
-let mySwiper2 = new Swiper('.team__swiper .swiper-container', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  centeredSlides: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-    },
-    768: {
-      slidesPerView:3,
-      spaceBetween: 30,
-    },
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    }
-  }
-});
