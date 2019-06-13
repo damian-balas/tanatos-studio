@@ -59,6 +59,11 @@ body {
   font-weight: 400;
 }
 
+.ls-03rem {
+  letter-spacing: 0.3rem;
+  display: block;
+}
+
 .fs-15 {
   font-size: 1.5em;
 }
@@ -103,10 +108,145 @@ body {
 
 
 /* HEADER */
-/*REPAIR IT LATER*/
-.menu {
+
+.nav__checkbox {
   display: none;
-  width: 30%;
+}
+
+.nav__checkbox:checked ~ .nav__background {
+  transform: scale(110);
+}
+
+.nav__checkbox:checked ~ .nav__nav {
+  width: 100%;
+  opacity: 1;
+  left: 0;
+}
+
+.nav__button {
+  background-color: #fff;
+  height: 3.5rem;
+  width: 3.5rem;
+  position: fixed;
+  text-align: center;
+  top: 1.75rem;
+  right: 1.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 11;
+  box-shadow: 0 0.8rem 2.2rem rgba(0, 0, 0, 0.1);
+}
+
+.nav__button:hover .nav__icon::before {
+  top: -0.6rem;
+}
+
+.nav__button:hover .nav__icon::after {
+  top: 0.6rem;
+}
+
+.nav__icon {
+  position: relative;
+  margin-top: 1.625rem;
+}
+
+.nav__icon, .nav__icon::after, .nav__icon::before {
+  width: 1.75rem;
+  height: 3px;
+  background-color: #6e6e6e;
+  display: inline-block;
+}
+
+.nav__icon::after, .nav__icon::before {
+  content: '';
+  position: absolute;
+  transition: top .2s;
+  left: 0;
+}
+
+.nav__icon::before {
+  top: -0.5rem;
+}
+
+.nav__icon::after {
+  top: 0.5rem;
+}
+
+
+.nav__background {
+  height: 3rem;
+  width: 3rem;
+  z-index: 9;
+  border-radius: 50%;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background-image: radial-gradient(#f7b90e,#f7600e);
+transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nav__nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: -100vh;
+  z-index: 10;
+  opacity: 0;
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.nav__ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.nav__li {
+  padding: 0.6rem 0;
+}
+
+.nav__a, .nav__a:link, .nav__a:visited {
+  font-size: 1.2rem;
+  display: inline-block;
+  color: white;
+  white-space: nowrap;
+  padding: 0.35rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50% , white 50%);
+  background-size: 230%;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav__a:hover, .nav__a:active {
+  background-position-x: 100%;
+  color: #f7600e;
+  transform: translateX(1rem);
+}
+
+.sc-media__group {
+  margin-top: 2rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-media__link {
+  font-size: 1.5rem;
+}
+
+.sc-media__link span{
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
 }
 
 .site-header {
@@ -135,6 +275,7 @@ body {
 .hero {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 2rem), 0% 100%);
+  padding: 3rem;
   padding-top: 5rem;
   min-height: 100vh;
   flex-direction: column;
@@ -146,14 +287,14 @@ body {
 
 .hero__motto {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 120%;
   text-align: center;
   font-weight: 100;
 }
 
 .hero__text {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 150%;
   text-align: center; 
@@ -167,6 +308,7 @@ body {
   text-decoration: none;
   text-align: center;
   font-size: 1rem;
+  margin: 1rem;
   width: 8.5rem;
   border-radius: 0.5rem;
   padding: 0.65rem 0;
@@ -189,7 +331,6 @@ body {
   width: 8.5rem;
   border-radius: 0.5rem;
   padding: 0.65rem 0;
-  margin-left: 1.2rem;
   border: 1px solid white;
   color: white;
 }
@@ -376,6 +517,7 @@ input:-webkit-autofill {
   background: linear-gradient(#121b25d9,rgba(18, 27,37, 0.85)), url('../img/woman-bg.png'); 
   background-size: cover;
   background-position: 60%;
+  background-attachment: fixed;
   color: white;
   display: flex;
   flex-direction: column;
@@ -396,7 +538,6 @@ input:-webkit-autofill {
 }
 
 .testimonial__text {
-  font-size: 1.2rem;
   font-style: italic;
   padding: 2rem 3.5rem;
 }
@@ -597,10 +738,7 @@ input:-webkit-autofill {
   margin-top: 2rem;
 }
 
-
-
 /* footer section  */
-
 .site-footer {
   position: absolute;
   display: flex;
@@ -609,6 +747,7 @@ input:-webkit-autofill {
   justify-content: center;
   bottom: 0;
   left: 50%;
+  width: 85%;
   transform: translateX(-50%);
   height: 12rem;
   color: white;

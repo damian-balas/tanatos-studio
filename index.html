@@ -2,60 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Tanatos Studio - We will code the best websites for you.</title>
   <meta name="description"
-    content="We will create a website for your business in no time! The best websites are made by our team! Every website we code is done with love and passion." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Damian Balas" />
-  <meta name="keywords" content="Create website" />
-  <meta name="theme-color" content="#f7600e" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet" />
+    content="We will create a website for your business in no time! The best websites are made by our team! Every website we code is done with love and passion.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Damian Balas">
+  <meta name="keywords" content="Create website">
+  <meta name="theme-color" content="#f7600e">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-  <link rel="stylesheet" href="./resources/css/main.css" />
-  <link rel="icon" href="favicon.png" />
+  <link rel="stylesheet" href="./resources/css/main.css">
+  <link rel="icon" href="favicon.png">
 </head>
 
-<body>
+<body id="home">
   <header class="site-header">
     <h1 class="logo">
       Tanatos<span class="orange-text fw-medium">Studio</span>
     </h1>
-    <div class="menu">
-      <span>Menu</span>
-      <nav class="main-nav">
-        <div class="nav__toggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
+
+    <div class="nav">
+      <input type="checkbox" class="nav__checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="nav__button">
+        <span class="nav__icon"></span>
+      </label>
+      <div class="nav__background"></div>
+      <nav class="nav__nav">
           <ul class="nav__ul">
-            <li class="nav__li"><a class="nav__a" href="#">Home</a></li>
-            <li class="nav__li"><a class="nav__a" href="#">About us</a></li>
-            <li class="nav__li"><a class="nav__a" href="#">Services</a></li>
-            <li class="nav__li"><a class="nav__a" href="#">Our works</a></li>
-            <li class="nav__li"><a class="nav__a" href="#">Contact</a></li>
+            <li class="nav__li"><a class="nav__a" href="#home">01 Home</a></li>
+            <li class="nav__li"><a class="nav__a" href="#services">02 Services</a></li>
+            <li class="nav__li"><a class="nav__a" href="#nesletter">03 Newsletter</a></li>
+            <li class="nav__li"><a class="nav__a" href="#work">04 Our works</a></li>
+            <li class="nav__li"><a class="nav__a" href="#testimonial">05 testimonial</a></li>
+            <li class="nav__li"><a class="nav__a" href="#team">07 Our team</a></li>
+            <li class="nav__li"><a class="nav__a" href="#contact">08 Contact</a></li>
+            <li class="nav__li">
+              <ul class="sc-media__group">
+                  <li class="sc-media__item"><a class="sc-media__link" href="#"><span class="fab fa-facebook-f"></span></a></li>
+                  <li class="sc-media__item"><a class="sc-media__link" href="#"><span class="fab fa-twitter"></span></a></li>
+                  <li class="sc-media__item"><a class="sc-media__link" href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                  <li class="sc-media__item"><a class="sc-media__link" href="#"> <span class="fab fa-dribbble"></span></a></li>
+                  <li class="sc-media__item"><a class="sc-media__link" href="#"> <span class="fab fa-behance"></span></a></li>
+              </ul>
+            </li>
           </ul>
-          <div class="sc-media">
-            <ul class="sc-media__group">
-              <li class="sc-media__item"><a href="#">1</a></li>
-              <li class="sc-media__item"><a href="#">2</a></li>
-              <li class="sc-media__item"><a href="#">3</a></li>
-              <li class="sc-media__item"><a href="#">4</a></li>
-              <li class="sc-media__item"><a href="#">5</a></li>
-            </ul>
-          </div>
-        </div>
+          
+            
       </nav>
     </div>
   </header>
   <main>
     <section class="hero flex-center">
       <h2 class="hero__motto">
-        We Design <br>
-        <span class="orange-text fw-medium fs-15">Things</span>
+        We Design
+        <span class="orange-text ls-03rem fw-medium fs-15">Things</span>
       </h2>
       <p class="hero__text">
         We will create a website <br>
@@ -145,7 +148,7 @@
       </h2>
       <form action="/" class="newsletter-form flex-center">
         <input name="email" class="text-input newsletter-form__input" type="email" placeholder="Enter Your email for newsletter"
-          required />
+          required>
         <button class="orange-btn">Subscribe</button>
       </form>
     </section>
@@ -158,13 +161,12 @@
         soluta id ratione.
       </p>
       <div class="our-works__images">
-        <!-- no alt tags, because it's only a layout, there will be an alternative text in the future c: -->
-        <img class="our-works__image" src="./resources/img/our-works1.png"/>
-        <img class="our-works__image" src="./resources/img/our-works2.png"/>
-        <img class="our-works__image" src="./resources/img/our-works3.png"/>
-        <img class="our-works__image" src="./resources/img/our-works4.png"/>
-        <img class="our-works__image" src="./resources/img/our-works5.png"/>
-        <img class="our-works__image" src="./resources/img/our-works6.png"/>
+        <img class="our-works__image" src="./resources/img/our-works1.png">
+        <img class="our-works__image" src="./resources/img/our-works2.png">
+        <img class="our-works__image" src="./resources/img/our-works3.png">
+        <img class="our-works__image" src="./resources/img/our-works4.png">
+        <img class="our-works__image" src="./resources/img/our-works5.png">
+        <img class="our-works__image" src="./resources/img/our-works6.png">
       </div>
       <button class="orange-btn">Show more</button>
     </section>
