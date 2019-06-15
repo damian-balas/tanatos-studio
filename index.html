@@ -24,33 +24,32 @@
       Tanatos<span class="orange-text fw-medium">Studio</span>
     </h1>
 
-    <div class="nav">
-      <input type="checkbox" class="nav__checkbox" id="nav-toggle">
-      <label for="nav-toggle" class="nav__button">
-        <span class="nav__icon"></span>
+    <div class="site-nav">
+      <input type="checkbox" class="site-nav__checkbox" id="site-nav-toggle">
+      <label for="site-nav-toggle" class="site-nav__button">
+        <span class="sr-only">Click here to open site-navigation</span>
+        <span class="site-nav__icon"></span>
       </label>
-      <div class="nav__background"></div>
-      <nav class="nav__nav">
-          <ul class="nav__ul">
-            <li class="nav__li"><a class="nav__a" href="#home">01 Home</a></li>
-            <li class="nav__li"><a class="nav__a" href="#services">02 Services</a></li>
-            <li class="nav__li"><a class="nav__a" href="#newsletter">03 Newsletter</a></li>
-            <li class="nav__li"><a class="nav__a" href="#work">04 Our works</a></li>
-            <li class="nav__li"><a class="nav__a" href="#testimonials">05 testimonials</a></li>
-            <li class="nav__li"><a class="nav__a" href="#team">07 Our team</a></li>
-            <li class="nav__li"><a class="nav__a" href="#contact">08 Contact</a></li>
-            <li class="nav__li">
-              <ul class="sc-media__group">
-                  <li class="sc-media__item"><a class="sc-media__link" href="#"><span class="fab fa-facebook-f"></span></a></li>
-                  <li class="sc-media__item"><a class="sc-media__link" href="#"><span class="fab fa-twitter"></span></a></li>
-                  <li class="sc-media__item"><a class="sc-media__link" href="#"><span class="fab fa-google-plus-g"></span></a></li>
-                  <li class="sc-media__item"><a class="sc-media__link" href="#"> <span class="fab fa-dribbble"></span></a></li>
-                  <li class="sc-media__item"><a class="sc-media__link" href="#"> <span class="fab fa-behance"></span></a></li>
+      <div class="site-nav__background"></div>
+      <nav class="site-nav__nav">
+          <ul class="site-nav__ul">
+            <li class="site-nav__li"><a class="site-nav__a" href="#home">01 Home</a></li>
+            <li class="site-nav__li"><a class="site-nav__a" href="#services">02 Services</a></li>
+            <li class="site-nav__li"><a class="site-nav__a" href="#newsletter">03 Newsletter</a></li>
+            <li class="site-nav__li"><a class="site-nav__a" href="#work">04 Our works</a></li>
+            <li class="site-nav__li"><a class="site-nav__a" href="#testimonials">05 testimonials</a></li>
+            <li class="site-nav__li"><a class="site-nav__a" href="#team">07 Our team</a></li>
+            <li class="site-nav__li"><a class="site-nav__a" href="#contact">08 Contact</a></li>
+            <li class="site-nav__li">
+              <ul class="social__group">
+                  <li class="social__item"><a href="#" class="fab fa-facebook-f"><span class="sr-only">Our page on facebook</span></a></li>
+                  <li class="social__item"><a href="#" class="fab fa-twitter"><span class="sr-only">Our page on twitter</span></a></li>
+                  <li class="social__item"><a href="#" class="fab fa-google-plus-g"><span class="sr-only">Our page on google plus</span></a></li>
+                  <li class="social__item"><a href="#" class="fab fa-dribbble"><span class="sr-only">Our page on dribbble</span></a></li>
+                  <li class="social__item"><a href="#" class="fab fa-behance"><span class="sr-only">Our page on behance</span></a></li>
               </ul>
             </li>
           </ul>
-          
-            
       </nav>
     </div>
   </header>
@@ -146,8 +145,10 @@
       <h2 class="sr-only">
         Enter your email address for newsletter subscription
       </h2>
+      
       <form action="/" class="newsletter-form flex-center">
-        <input name="email" class="text-input newsletter-form__input" type="email" placeholder="Enter Your email for newsletter"
+        <label class="label newsletter-form__label" for="newsletter-form__input">Enter your email for newsletter:</label>
+        <input id="newsletter-form__input" name="email" class="text-input newsletter-form__input" type="email" placeholder="I.e example@mail.com"
           required>
         <button class="orange-btn">Subscribe</button>
       </form>
@@ -209,40 +210,40 @@
               <div class="employee">
                 <div class="employee__photo employee__photo--1"></div>
                 <span class="employee__name">Catherina Gail</span>
-                <div class="employee__social-media">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-google-plus-g"></a>
+                <div class="employee__social">
+                    <a href="#" class="fab fa-facebook-f"><span class="sr-only">Catherina's facebook</span></a>
+                    <a href="#" class="fab fa-twitter"><span class="sr-only">Catherina's twitter</span></a>
+                    <a href="#" class="fab fa-google-plus-g"><span class="sr-only">Catherina's google plus</span></a>
                 </div>
                 <p class="employee__text">Lorem ipsum dolor sit amet consectetur dolore doloremque inventore nemo enim.</p>
               </div>
               <div class="employee">
                 <div class="employee__photo employee__photo--2"></div>
                 <span class="employee__name">Harvey Rube</span>
-                <div class="employee__social-media">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-google-plus-g"></a>
+                <div class="employee__social">
+                    <a href="#" class="fab fa-facebook-f"><span class="sr-only">Harvey's google plus</span></a>
+                    <a href="#" class="fab fa-twitter"><span class="sr-only">Harvey's google plus</span></a>
+                    <a href="#" class="fab fa-google-plus-g"><span class="sr-only">Harvey's google plus</span></a>
                 </div> 
                 <p class="employee__text">Lorem ipsum dolor sit amet consectetur dolore doloremque inventore nemo enim.</p>
               </div>
               <div class="employee">
                 <div class="employee__photo employee__photo--3"></div>
                   <span class="employee__name">Janet Pris</span>
-                  <div class="employee__social-media">
-                      <a href="#" class="fab fa-facebook-f"></a>
-                      <a href="#" class="fab fa-twitter"></a>
-                      <a href="#" class="fab fa-google-plus-g"></a>
+                  <div class="employee__social">
+                      <a href="#" class="fab fa-facebook-f"><span class="sr-only">Janet's google plus</span></a>
+                      <a href="#" class="fab fa-twitter"><span class="sr-only">Janet's google plus</span></a>
+                      <a href="#" class="fab fa-google-plus-g"><span class="sr-only">Janet's google plus</span></a>
                   </div>
                   <p class="employee__text">Lorem ipsum dolor sit amet consectetur dolore doloremque inventore nemo enim.</p>
                 </div>
               <div class="employee">
                 <div class="employee__photo employee__photo--4"></div>              
                 <span class="employee__name">Kevin Ward</span>
-                <div class="employee__social-media">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-google-plus-g"></a>
+                <div class="employee__social">
+                    <a href="#" class="fab fa-facebook-f"><span class="sr-only">Kevin's google plus</span></a>
+                    <a href="#" class="fab fa-twitter"><span class="sr-only">Kevin's google plus</span></a>
+                    <a href="#" class="fab fa-google-plus-g"><span class="sr-only">Kevin's google plus</span></a>
                 </div>
                 <p class="employee__text">Lorem ipsum dolor sit amet consectetur dolore doloremque inventore nemo enim.</p>
               </div>
@@ -250,24 +251,29 @@
     <section id="contact" class="contact">
         <h2 class="contact__heading">Say <span class="orange-text">Hello</span></h2>
         <p class="contact__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
         <form class="contact-form" action="/">
-          <input name="email" class="text-input contact-form__input" type="email" placeholder="Your Email" required>
-          <input name="subject" class="text-input contact-form__input" type="text" placeholder="Subject" required>
-          <textarea minlength="10" placeholder="Your Message" name="message" class="text-input contact-form__txtarea" required></textarea>
           <button class="contact-form__btn orange-btn">Hire us</button>
+          <textarea id="contact-form__textarea" minlength="10" placeholder="Hello, my name is Damian. I need a website design ..." name="message" class="text-input contact-form__txtarea" required></textarea>
+          <label class="contact-form__label label" for="contact-form__textarea">Your message:</label>
+          <input id="contact-form__email" name="email" class="text-input contact-form__input" type="email" placeholder="I.e example@mail.com" required>
+          <label class="contact-form__label label" for="contact-form__email">Your email:</label>
+          <input id="contact-form__subject" name="subject" class="text-input contact-form__input" type="text" placeholder="I need a website design" required>
+          <label class="contact-form__label label" for="contact-form__subject">Subject:</label>
         </form> 
-          <div class="contact-form__social-media">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
-            <a href="#" class="fab fa-google-plus-g"></a>
-            <a href="#" class="fab fa-dribbble"></a>
-            <a href="#" class="fab fa-behance"></a>
+
+          <div class="contact-form__social">
+            <a href="#" class="fab fa-facebook-f"><span class="sr-only">Our page on facebook</span></a>
+            <a href="#" class="fab fa-twitter"><span class="sr-only">Our page on twitter</span></a>
+            <a href="#" class="fab fa-google-plus-g"><span class="sr-only">Our page on google plus</span></a>
+            <a href="#" class="fab fa-dribbble"><span class="sr-only">Our page on dribbble</span></a>
+            <a href="#" class="fab fa-behance"><span class="sr-only">Our page on behance</span></a>
           </div>
     </section>
   </main>
   <footer class="site-footer">
     <p class="site-footer__text">&copy; Copyright All rights reserved <span class="site-footer__year"></span></p>
-    <p class="site-footer__text">Icons made by <a class="site-footer__link" href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a class="site-footer__link" href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> <br> is licensed by <a class="site-footer__link" href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+    <p class="site-footer__text">Icons made by <a class="site-footer__link" href="https://www.flaticon.com/authors/smashicons">Smashicons</a> from <a class="site-footer__link" href="https://www.flaticon.com/" 			    >www.flaticon.com</a> <br> is licensed by <a class="site-footer__link" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC 3.0 BY</a></p>
   </footer>
 
   <script type="module" src="./resources/js/main.js"></script>
